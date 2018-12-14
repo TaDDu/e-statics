@@ -1,7 +1,6 @@
 module.exports = function(app) {
   class estatics {
     constructor(app) {
-      this.app = app;
       this.statics = {
         GET: 0,
         POST: 0,
@@ -15,13 +14,20 @@ module.exports = function(app) {
         TOTAL_MS: 0
       };
       this.counter = this.counter.bind(this);
-      this.app.get("/e-statics", (req, res) => {
-        res.json(this.statics);
-      });
+
+      if (app) {
+        this.app = app;
+        this.app.get("/e-statics", (req, res) => {
+          res.json(this.statics);
+        });
+      }
+
+      // Compare min ms
       this.MIN_MS = ms => {
         if (this.statics.MIN_MS > ms || this.statics.MIN_MS == 0)
           this.statics.MIN_MS = ms;
       };
+      // compare max ms
       this.MAX_MS = ms => {
         if (this.statics.MAX_MS < ms) this.statics.MAX_MS = ms;
       };
@@ -45,6 +51,9 @@ module.exports = function(app) {
         });
         next();
       }
+    }
+    get stats() {
+      return this.statics;
     }
   }
   return new estatics(app);
