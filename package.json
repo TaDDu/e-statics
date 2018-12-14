@@ -1,6 +1,6 @@
 {
   "name": "e-statics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Express request statics counter",
   "main": "index.js",
   "scripts": {
