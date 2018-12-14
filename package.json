@@ -1,11 +1,19 @@
 {
   "name": "e-statics",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Express request statics counter",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tatu Mehtäläinen",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaDDu/e-statics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TaDDu/e-statics/issues"
+  },
+  "homepage": "https://github.com/TaDDu/e-statics#readme"
 }
