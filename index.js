@@ -47,6 +47,5 @@ module.exports = function(app) {
       }
     }
   }
-  var estatics = new estatics(app);
-  return estatics;
+  return new estatics(app);
 };
