@@ -1,5 +1,19 @@
 # e-statics
-Module for express statics
+Module for express statics, returns
+```js
+{
+"GET": 0,
+"POST": 0,
+"PUT": 0,
+"DELETE": 0,
+"TOTAL": 0,
+"LAST_MS": 0,
+"AVG_MS": 0,
+"MIN_MS": 0,
+"MAX_MS": 0,
+"TOTAL_MS": 0
+}
+```
 
 ### Installation
 npm install e-statics --save
