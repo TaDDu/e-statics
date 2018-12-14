@@ -1,4 +1,8 @@
-# e-statics
+# e-statics   
+
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
+
 Module for express statics, returns
 ```js
 {
@@ -42,3 +46,10 @@ app.get('/', (req, res) => res.send('Hello World!'))
 app.get('/my-stats-route', (req, res) => res.send(eStatics.stats))
 app.listen(8080, () => console.log(`Example app listening on port ${port}!`))
 ```
+
+
+
+[npm-image]: https://img.shields.io/npm/v/e-statics.svg
+[npm-url]: https://npmjs.org/package/e-statics
+[downloads-image]: https://img.shields.io/npm/dt/e-statics.svg
+[downloads-url]: https://npmjs.org/package/e-statics
